@@ -1,1 +1,228 @@
-DASDS
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade — Super Fiscal</title>
+<meta name="description" content="Política de Privacidade da extensão Super Fiscal para Google Chrome / Privacy Policy for the Super Fiscal Chrome extension.">
+<style>
+  :root { --fg:#1d2433; --muted:#5b6475; --bg:#fff; --line:#e3e6ec; --accent:#047a00; --soft:#f5f7fa; }
+  @media (prefers-color-scheme: dark) {
+    :root { --fg:#e8ebf1; --muted:#a3adbf; --bg:#14171d; --line:#2b313c; --accent:#5fd45a; --soft:#1c2028; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; }
+  main { max-width:820px; margin:0 auto; padding:32px 20px 64px; }
+  h1 { font-size:1.9rem; line-height:1.25; margin:0 0 4px; }
+  h2 { font-size:1.2rem; margin:2rem 0 .5rem; padding-top:.5rem; border-top:1px solid var(--line); }
+  h3 { font-size:1rem; margin:1.2rem 0 .3rem; }
+  p, li { margin:.45rem 0; }
+  ul { padding-left:1.3rem; }
+  a { color:var(--accent); }
+  .meta { color:var(--muted); font-size:.92rem; }
+  .lang { display:flex; gap:12px; margin:14px 0 6px; font-size:.95rem; }
+  .box { background:var(--soft); border:1px solid var(--line); border-radius:10px; padding:12px 16px; margin:14px 0; }
+  table { width:100%; border-collapse:collapse; margin:.8rem 0; font-size:.93rem; }
+  th, td { text-align:left; vertical-align:top; border:1px solid var(--line); padding:8px 10px; }
+  th { background:var(--soft); }
+  .scroll { overflow-x:auto; }
+  hr.sep { border:0; border-top:3px solid var(--line); margin:3.2rem 0 2rem; }
+  code { background:var(--soft); padding:1px 5px; border-radius:4px; font-size:.9em; }
+</style>
+</head>
+<body>
+<main>
+
+<!-- ===================================================== PORTUGUÊS ===================================================== -->
+<section id="pt" lang="pt-BR">
+  <h1>Política de Privacidade — Super Fiscal</h1>
+  <p class="meta">Extensão para Google Chrome · Versão 1.4.1 e posteriores · Última atualização: 24 de outubro de 2026</p>
+  <div class="lang"><strong>Português</strong> · <a href="#en">English version below</a></div>
+
+  <div class="box">
+    <strong>Resumo.</strong> O Super Fiscal funciona localmente no seu navegador. O desenvolvedor <strong>não opera servidor</strong>, <strong>não coleta</strong>, <strong>não recebe</strong>, <strong>não vende</strong> e <strong>não compartilha</strong> os seus dados. A extensão não utiliza análise de uso, publicidade, rastreamento nem inteligência artificial em nuvem. A única comunicação automática da extensão com um servidor externo é a consulta de produto pelo código de barras (EAN/GTIN) à base aberta Open Food Facts, e somente quando você aciona essa consulta.
+  </div>
+
+  <h2>1. Quem somos</h2>
+  <p>O Super Fiscal é uma extensão de navegador desenvolvida por Emanoel (“desenvolvedor”), que atua como responsável pela extensão. Contato para assuntos de privacidade: <a href="mailto:emanuelviana152@gmail.com">emanuelviana152@gmail.com</a>.</p>
+  <p>O Super Fiscal não é afiliado nem endossado pela Secretaria Especial da Receita Federal do Brasil, pelo Portal Nacional da NF-e, pelo Meu Danfe ou pelo Open Food Facts.</p>
+
+  <h2>2. Finalidade da extensão</h2>
+  <p>O Super Fiscal reúne ferramentas para rotinas fiscais: consulta e geração de DANFE a partir da chave de acesso da NF-e (por meio do Portal Nacional da NF-e e do Meu Danfe), consulta de várias chaves, geração de arquivos XML, transcrição de imagem (OCR) para identificar chaves de acesso e leitura e validação de códigos de barras EAN/GTIN.</p>
+
+  <h2>3. Informações que a extensão trata</h2>
+  <p>Todo o tratamento descrito abaixo ocorre no seu próprio computador, dentro do navegador, salvo quando expressamente indicado.</p>
+  <div class="scroll"><table>
+    <tr><th>Informação</th><th>Como é usada</th><th>Onde fica</th></tr>
+    <tr><td><strong>Chaves de acesso de NF-e</strong> que você digita, cola, anexa ou obtém por OCR. Uma chave contém, entre outros, UF, data, CNPJ/CPF do emitente, modelo, série e número.</td><td>Validar a chave, montar o nome dos arquivos, abrir as consultas e gerar arquivos XML.</td><td>Processadas no navegador. Não são enviadas ao desenvolvedor.</td></tr>
+    <tr><td><strong>Arquivos que você anexa</strong>: arquivos de texto, CSV ou XML com chaves e imagens de código de barras.</td><td>Extrair as chaves ou ler o código.</td><td>Lidos localmente. Não são copiados, salvos nem enviados pela extensão.</td></tr>
+    <tr><td><strong>Captura de tela</strong> (somente ao usar a transcrição de imagem ou o leitor de EAN na tela). A extensão captura a aba visível e recorta a área que você seleciona.</td><td>Executar o OCR ou a leitura do código de barras.</td><td>Processada localmente, em um documento interno da extensão, com mecanismo de OCR empacotado na própria extensão. A imagem não é salva em disco nem enviada.</td></tr>
+    <tr><td><strong>Código EAN/GTIN</strong> (apenas os dígitos do código).</td><td>Consultar nome, marca, quantidade, categorias e imagem do produto.</td><td>Enviado ao Open Food Facts (ver item 5).</td></tr>
+    <tr><td><strong>Histórico local</strong>: as 8 chaves mais recentes consultadas (chave, número, UF, modelo, data e hora).</td><td>Atalho para reutilizar chaves.</td><td>Armazenamento local do navegador (<code>localStorage</code>). Pode ser apagado pelo botão “Limpar” do histórico.</td></tr>
+    <tr><td><strong>Abreviações de empresa</strong> que você informa, associadas ao CNPJ/CPF do emitente.</td><td>Compor o nome dos arquivos baixados, por exemplo “NF - n1234 (EMPRESA)”.</td><td>Armazenamento local do navegador.</td></tr>
+    <tr><td><strong>Rascunhos</strong>: chaves digitadas, coladas ou anexadas nos campos de texto.</td><td>Manter o conteúdo ao fechar e reabrir a extensão.</td><td>Armazenamento local do navegador. Apagados pelos botões “Limpar” (o histórico tem botão próprio).</td></tr>
+    <tr><td><strong>Preferências</strong>: download automático, tipo de arquivo (PDF/XML) e modo de leitura do EAN.</td><td>Lembrar suas escolhas.</td><td>Armazenamento local do navegador.</td></tr>
+    <tr><td><strong>Licença Pro</strong>: resumo criptográfico (hash SHA-256) da chave de ativação, data e hora da ativação e lista de resumos já utilizados.</td><td>Liberar as ferramentas Pro. A validação é feita offline, sem servidor.</td><td><code>chrome.storage.local</code>. Não é enviada a ninguém.</td></tr>
+    <tr><td><strong>Dados temporários de funcionamento</strong>: identificador da aba de trabalho e relação entre abas abertas e nomes de arquivos.</td><td>Aplicar o nome correto aos arquivos baixados.</td><td><code>chrome.storage.session</code>. Apagados ao fechar o navegador.</td></tr>
+    <tr><td><strong>Área de transferência</strong>.</td><td>A extensão lê o conteúdo somente quando você clica em “Colar” e grava somente quando você clica em copiar (por exemplo, a chave ou o EAN).</td><td>Não é armazenada pela extensão.</td></tr>
+  </table></div>
+  <p>A extensão <strong>não coleta</strong> nome, e-mail, endereço, localização, histórico de navegação, cookies, senhas, dados de pagamento, nem o conteúdo geral das páginas que você visita.</p>
+
+  <h2>4. Páginas em que a extensão atua</h2>
+  <p>A extensão injeta scripts apenas em dois endereços: a página de consulta do Portal Nacional da NF-e (<code>https://www.nfe.fazenda.gov.br/portal/consultaRecaptcha.aspx</code>) e o site Meu Danfe (<code>https://meudanfe.com.br/</code> e <code>https://www.meudanfe.com.br/</code>). Nelas, a extensão:</p>
+  <ul>
+    <li>preenche o campo da chave de acesso. A chave é entregue à página por meio do fragmento da URL (a parte após o <code>#</code>), que não é enviado ao servidor, e é removida da barra de endereço em seguida;</li>
+    <li>exibe um aviso na página (com botão para copiar a chave);</li>
+    <li>no Meu Danfe, observa os cliques nos botões “Buscar” e “Baixar” e verifica se o captcha foi resolvido por você (apenas se o campo de resposta do captcha está preenchido) para acionar o botão de busca e de download automaticamente, quando você ativa essa opção. <strong>A extensão não resolve captcha</strong>; essa etapa é sempre sua;</li>
+    <li>não lê, não guarda e não transmite os dados exibidos nessas páginas (como dados da nota, emitente ou destinatário).</li>
+  </ul>
+  <p>Ao clicar em “Buscar” ou “Consultar” nesses sites, é você quem envia a chave a eles, e o tratamento passa a seguir as políticas desses sites.</p>
+  <p><strong>Downloads.</strong> Para nomear os arquivos baixados do Meu Danfe, a extensão acompanha localmente o nome e o endereço de origem dos downloads do navegador. Somente os arquivos originados do Meu Danfe são renomeados e salvos na pasta <code>Downloads/Super Fiscal/</code>. Os arquivos XML gerados pela extensão também são salvos nessa pasta. Nenhuma informação sobre downloads é enviada ao desenvolvedor.</p>
+
+  <h2>5. Serviços de terceiros</h2>
+  <ul>
+    <li><strong>Open Food Facts</strong> (<code>world.openfoodfacts.org</code>). Ao consultar um EAN, a extensão envia ao Open Food Facts uma requisição HTTPS contendo o código consultado. Como em qualquer requisição de internet, o serviço recebe o seu endereço IP e dados técnicos do navegador. A imagem do produto, quando existe, é carregada dos servidores do Open Food Facts. O tratamento realizado por esse serviço segue a política de privacidade dele (<a href="https://world.openfoodfacts.org/privacy" rel="noopener">world.openfoodfacts.org/privacy</a>). Nenhuma outra informação sua é enviada nessa consulta.</li>
+    <li><strong>Portal Nacional da NF-e (Receita Federal / Fazenda)</strong> e <strong>Meu Danfe</strong>. Abertos por ação sua para consultar ou baixar a nota. Os dados que você enviar a esses sites seguem as políticas e os termos deles.</li>
+    <li><strong>Google Pesquisa e portal GTIN da SVRS</strong>. Se você clicar em “Pesquisar no Google”, uma nova aba abre a pesquisa do código EAN no Google. Se você clicar em “Consulta GTIN (SEFAZ)”, a extensão copia o código para a área de transferência e abre o portal (<code>dfe-portal.svrs.rs.gov.br</code>). Nada disso ocorre sem o seu clique.</li>
+  </ul>
+  <p>A extensão não contém código remoto: o mecanismo de OCR (Tesseract) e os dados de idioma português estão empacotados na própria extensão e funcionam sem internet.</p>
+
+  <h2>6. Permissões do Chrome e por que são necessárias</h2>
+  <div class="scroll"><table>
+    <tr><th>Permissão</th><th>Motivo</th></tr>
+    <tr><td><code>activeTab</code></td><td>Acessar temporariamente a aba ativa, somente após você abrir a extensão e acionar a transcrição de imagem ou o leitor de EAN na tela, para capturar a área visível.</td></tr>
+    <tr><td><code>scripting</code></td><td>Exibir a ferramenta de seleção de área (OCR e EAN) na aba ativa quando você a aciona.</td></tr>
+    <tr><td><code>offscreen</code></td><td>Executar o OCR e a leitura de códigos de barras em um documento interno da extensão, sem enviar imagens para fora.</td></tr>
+    <tr><td><code>downloads</code></td><td>Salvar os arquivos XML gerados e nomear os arquivos baixados do Meu Danfe (<code>Downloads/Super Fiscal/</code>).</td></tr>
+    <tr><td><code>storage</code></td><td>Guardar localmente a licença, as preferências e os dados temporários descritos no item 3.</td></tr>
+    <tr><td>Acesso a <code>https://world.openfoodfacts.org/*</code></td><td>Consultar os dados do produto pelo código EAN.</td></tr>
+    <tr><td>Acesso a <code>nfe.fazenda.gov.br</code> (página de consulta) e <code>meudanfe.com.br</code></td><td>Preencher a chave de acesso e acompanhar os botões de busca e download, conforme o item 4.</td></tr>
+  </table></div>
+
+  <h2>7. O que não fazemos</h2>
+  <ul>
+    <li>Não vendemos nem transferimos dados de usuários a terceiros, exceto o descrito no item 5, e somente por ação sua.</li>
+    <li>Não usamos nem transferimos dados para finalidades alheias à função da extensão, nem para publicidade, análise de crédito ou qualquer finalidade de empréstimo.</li>
+    <li>Não usamos ferramentas de análise de uso, cookies de rastreamento ou identificadores de publicidade.</li>
+    <li>Nenhuma pessoa tem acesso aos seus dados, pois eles não chegam ao desenvolvedor.</li>
+    <li>Não utilizamos seus dados para treinar modelos de inteligência artificial.</li>
+  </ul>
+
+  <h2>8. Retenção e exclusão</h2>
+  <p>Os dados ficam apenas no seu navegador e permanecem até que você os apague. Você pode limpar o histórico e os rascunhos pelos botões da própria extensão, remover a ativação da licença na aba Licença e apagar tudo desinstalando a extensão (<code>chrome://extensions</code>) ou limpando os dados do site da extensão nas configurações do Chrome. O desenvolvedor não mantém cópia desses dados.</p>
+
+  <h2>9. Segurança</h2>
+  <p>As comunicações com serviços externos usam HTTPS. Os dados processados localmente permanecem sob a proteção do seu perfil do navegador e do seu sistema operacional. Recomendamos manter o computador e o Chrome atualizados e não compartilhar o perfil do navegador com outras pessoas.</p>
+
+  <h2>10. Seus direitos (LGPD)</h2>
+  <p>Nos termos da Lei Geral de Proteção de Dados (Lei nº 13.709/2018), o titular pode solicitar confirmação de tratamento, acesso, correção, anonimização, eliminação, informação sobre compartilhamento e revogação de consentimento. Como os dados tratados pela extensão permanecem no seu dispositivo e não são recebidos pelo desenvolvedor, você mesmo pode exercer a maior parte desses direitos conforme o item 8. Para qualquer dúvida ou solicitação, escreva para <a href="mailto:emanuelviana152@gmail.com">emanuelviana152@gmail.com</a>.</p>
+
+  <h2>11. Crianças e adolescentes</h2>
+  <p>O Super Fiscal é uma ferramenta profissional e não se destina a menores de 18 anos. A extensão não coleta intencionalmente dados de crianças e adolescentes.</p>
+
+  <h2>12. Alterações desta política</h2>
+  <p>Esta política pode ser atualizada, por exemplo, quando a extensão ganhar novas funções. A data da última atualização aparece no topo desta página. Se uma mudança passar a envolver coleta ou envio de dados, a política será atualizada antes da publicação da nova versão da extensão.</p>
+
+  <h2>13. Contato</h2>
+  <p>Emanoel — <a href="mailto:emanuelviana152@gmail.com">emanuelviana152@gmail.com</a></p>
+</section>
+
+<hr class="sep">
+
+<!-- ===================================================== ENGLISH ===================================================== -->
+<section id="en" lang="en">
+  <h1>Privacy Policy — Super Fiscal</h1>
+  <p class="meta">Google Chrome extension · Version 1.4.1 and later · Last updated: October 24, 2026</p>
+  <div class="lang"><a href="#pt">Versão em português acima</a> · <strong>English</strong></div>
+
+  <div class="box">
+    <strong>Summary.</strong> Super Fiscal works locally in your browser. The developer <strong>does not run a server</strong> and <strong>does not collect, receive, sell or share</strong> your data. The extension uses no analytics, advertising, tracking or cloud AI. Its only automatic communication with an external server is the product lookup by barcode (EAN/GTIN) against the open database Open Food Facts, and only when you trigger that lookup.
+  </div>
+
+  <h2>1. Who we are</h2>
+  <p>Super Fiscal is a browser extension developed by Emanoel (the “developer”), who is responsible for the extension. Privacy contact: <a href="mailto:emanuelviana152@gmail.com">emanuelviana152@gmail.com</a>.</p>
+  <p>Super Fiscal is not affiliated with or endorsed by the Brazilian Federal Revenue Service, the Brazilian national NF-e portal, Meu Danfe or Open Food Facts.</p>
+
+  <h2>2. Purpose</h2>
+  <p>Super Fiscal provides tools for Brazilian tax routines: looking up and generating the DANFE from an NF-e access key (through the national NF-e portal and Meu Danfe), batch lookups of several keys, XML file generation, image transcription (OCR) to identify access keys, and reading and validating EAN/GTIN barcodes.</p>
+
+  <h2>3. Information the extension handles</h2>
+  <p>All processing described below happens on your own computer, inside the browser, unless stated otherwise.</p>
+  <div class="scroll"><table>
+    <tr><th>Information</th><th>Use</th><th>Where it lives</th></tr>
+    <tr><td><strong>NF-e access keys</strong> that you type, paste, attach or obtain through OCR. A key contains, among other things, the state, date, issuer’s CNPJ/CPF, model, series and number.</td><td>Validate the key, build file names, open lookups and generate XML files.</td><td>Processed in the browser. Not sent to the developer.</td></tr>
+    <tr><td><strong>Files you attach</strong>: text, CSV or XML files with keys, and barcode images.</td><td>Extract the keys or read the code.</td><td>Read locally. Not copied, saved or sent by the extension.</td></tr>
+    <tr><td><strong>Screen capture</strong> (only when you use image transcription or the on-screen EAN reader). The extension captures the visible tab and crops the area you select.</td><td>Run OCR or barcode reading.</td><td>Processed locally in an internal extension document, using an OCR engine bundled in the extension. The image is not saved to disk or sent anywhere.</td></tr>
+    <tr><td><strong>EAN/GTIN code</strong> (the digits only).</td><td>Look up the product name, brand, quantity, categories and image.</td><td>Sent to Open Food Facts (see section 5).</td></tr>
+    <tr><td><strong>Local history</strong>: the 8 most recent keys (key, number, state, model, date and time).</td><td>Shortcut to reuse keys.</td><td>Browser local storage (<code>localStorage</code>). Can be erased with the history “Limpar” (clear) button.</td></tr>
+    <tr><td><strong>Company abbreviations</strong> that you enter, linked to the issuer’s CNPJ/CPF.</td><td>Build downloaded file names, e.g. “NF - n1234 (COMPANY)”.</td><td>Browser local storage.</td></tr>
+    <tr><td><strong>Drafts</strong>: keys typed, pasted or attached in the text fields.</td><td>Keep content when you close and reopen the extension.</td><td>Browser local storage. Erased with the “Limpar” (clear) buttons (the history has its own button).</td></tr>
+    <tr><td><strong>Preferences</strong>: automatic download, file type (PDF/XML) and EAN reading mode.</td><td>Remember your choices.</td><td>Browser local storage.</td></tr>
+    <tr><td><strong>Pro license</strong>: a cryptographic hash (SHA-256) of the activation key, activation date/time and a list of already-used hashes.</td><td>Unlock Pro tools. Validation is offline, with no server.</td><td><code>chrome.storage.local</code>. Not sent to anyone.</td></tr>
+    <tr><td><strong>Temporary operating data</strong>: the working tab identifier and the mapping between open tabs and file names.</td><td>Apply the right name to downloaded files.</td><td><code>chrome.storage.session</code>. Erased when the browser closes.</td></tr>
+    <tr><td><strong>Clipboard</strong>.</td><td>The extension reads it only when you click “Paste” and writes to it only when you click a copy button (e.g. the key or the EAN).</td><td>Not stored by the extension.</td></tr>
+  </table></div>
+  <p>The extension <strong>does not collect</strong> your name, email, address, location, browsing history, cookies, passwords, payment data, or the general content of the pages you visit.</p>
+
+  <h2>4. Pages where the extension runs</h2>
+  <p>The extension injects scripts only on two destinations: the national NF-e portal lookup page (<code>https://www.nfe.fazenda.gov.br/portal/consultaRecaptcha.aspx</code>) and the Meu Danfe site (<code>https://meudanfe.com.br/</code> and <code>https://www.meudanfe.com.br/</code>). On those pages the extension:</p>
+  <ul>
+    <li>fills in the access key field. The key is passed to the page through the URL fragment (the part after <code>#</code>), which is not sent to the server, and is then removed from the address bar;</li>
+    <li>shows a notice on the page (with a button to copy the key);</li>
+    <li>on Meu Danfe, observes clicks on the “Buscar” (search) and “Baixar” (download) buttons and checks whether you solved the captcha (only whether the captcha response field is filled) in order to trigger the search and download buttons automatically when you enable that option. <strong>The extension never solves captchas</strong>; that step is always yours;</li>
+    <li>does not read, store or transmit the data displayed on those pages (such as invoice, issuer or recipient data).</li>
+  </ul>
+  <p>When you click “Search” or “Consult” on those sites, you are the one submitting the key to them, and their own policies then apply.</p>
+  <p><strong>Downloads.</strong> To name files downloaded from Meu Danfe, the extension locally checks the file name and origin of the browser’s downloads. Only files originating from Meu Danfe are renamed and saved to <code>Downloads/Super Fiscal/</code>. XML files generated by the extension are also saved there. No download information is sent to the developer.</p>
+
+  <h2>5. Third-party services</h2>
+  <ul>
+    <li><strong>Open Food Facts</strong> (<code>world.openfoodfacts.org</code>). When you look up an EAN, the extension sends an HTTPS request containing the code to Open Food Facts. As with any internet request, the service receives your IP address and technical browser data. The product image, when available, is loaded from Open Food Facts servers. Processing by that service is governed by its own privacy policy (<a href="https://world.openfoodfacts.org/privacy" rel="noopener">world.openfoodfacts.org/privacy</a>). No other information about you is sent in this lookup.</li>
+    <li><strong>National NF-e portal (Brazilian Federal Revenue / Fazenda)</strong> and <strong>Meu Danfe</strong>. Opened by your action to look up or download the invoice. Data you submit to those sites is governed by their policies and terms.</li>
+    <li><strong>Google Search and the SVRS GTIN portal</strong>. If you click “Pesquisar no Google” (search on Google), a new tab opens a Google search for the EAN code. If you click “Consulta GTIN (SEFAZ)”, the extension copies the code to the clipboard and opens the portal (<code>dfe-portal.svrs.rs.gov.br</code>). None of this happens without your click.</li>
+  </ul>
+  <p>The extension contains no remote code: the OCR engine (Tesseract) and the Portuguese language data are bundled in the extension and work offline.</p>
+
+  <h2>6. Chrome permissions and why they are needed</h2>
+  <div class="scroll"><table>
+    <tr><th>Permission</th><th>Reason</th></tr>
+    <tr><td><code>activeTab</code></td><td>Temporary access to the active tab, only after you open the extension and trigger image transcription or the on-screen EAN reader, to capture the visible area.</td></tr>
+    <tr><td><code>scripting</code></td><td>Display the area-selection tool (OCR and EAN) on the active tab when you trigger it.</td></tr>
+    <tr><td><code>offscreen</code></td><td>Run OCR and barcode reading in an internal extension document, without sending images out.</td></tr>
+    <tr><td><code>downloads</code></td><td>Save generated XML files and name files downloaded from Meu Danfe (<code>Downloads/Super Fiscal/</code>).</td></tr>
+    <tr><td><code>storage</code></td><td>Keep locally the license, preferences and temporary data described in section 3.</td></tr>
+    <tr><td>Access to <code>https://world.openfoodfacts.org/*</code></td><td>Look up product data by EAN code.</td></tr>
+    <tr><td>Access to <code>nfe.fazenda.gov.br</code> (lookup page) and <code>meudanfe.com.br</code></td><td>Fill in the access key and follow the search and download buttons, as described in section 4.</td></tr>
+  </table></div>
+
+  <h2>7. What we do not do</h2>
+  <ul>
+    <li>We do not sell or transfer user data to third parties, except as described in section 5 and only through your own action.</li>
+    <li>We do not use or transfer data for purposes unrelated to the extension’s function, nor for advertising, creditworthiness or lending purposes.</li>
+    <li>We use no analytics tools, tracking cookies or advertising identifiers.</li>
+    <li>No human has access to your data, because it never reaches the developer.</li>
+    <li>We do not use your data to train AI models.</li>
+  </ul>
+
+  <h2>8. Retention and deletion</h2>
+  <p>Data stays only in your browser until you delete it. You can clear the history and drafts using the extension’s own buttons, remove the license activation in the License tab, and erase everything by uninstalling the extension (<code>chrome://extensions</code>) or clearing the extension’s site data in Chrome settings. The developer keeps no copy of this data.</p>
+
+  <h2>9. Security</h2>
+  <p>Communications with external services use HTTPS. Locally processed data remains protected by your browser profile and operating system. We recommend keeping your computer and Chrome up to date and not sharing your browser profile with others.</p>
+
+  <h2>10. Your rights (Brazilian LGPD)</h2>
+  <p>Under the Brazilian General Data Protection Law (Law No. 13,709/2018), data subjects may request confirmation of processing, access, correction, anonymization, deletion, information about sharing, and withdrawal of consent. Because the data handled by the extension stays on your device and is not received by the developer, you can exercise most of these rights yourself as described in section 8. For any question or request, write to <a href="mailto:emanuelviana152@gmail.com">emanuelviana152@gmail.com</a>.</p>
+
+  <h2>11. Children</h2>
+  <p>Super Fiscal is a professional tool and is not intended for people under 18. The extension does not knowingly collect data from children.</p>
+
+  <h2>12. Changes to this policy</h2>
+  <p>This policy may be updated, for example when the extension gains new features. The date of the last update appears at the top of this page. If a change ever involves collecting or sending data, the policy will be updated before the new version of the extension is published.</p>
+
+  <h2>13. Contact</h2>
+  <p>Emanoel — <a href="mailto:emanuelviana152@gmail.com">emanuelviana152@gmail.com</a></p>
+</section>
+
+</main>
+</body>
+</html>
